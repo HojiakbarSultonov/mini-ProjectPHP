@@ -41,7 +41,10 @@ $posts = $statement->fetchAll();
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
                         <div class="card-body">
-                            <h6><?=$post['title']?></h6>
+                            <a href="post.php?id=<?=$post['id']?>" class="text-decoration-none">
+                                <h6><?=$post['title']?></h6>
+                            </a>
+
                             <p class="card-text"><?=$post['body']?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
