@@ -1,0 +1,7 @@
+<?php
+$title = "Bosh sahifa";
+require './includes/header.php'
+?>;
+
+
+<?php require './includes/footer.php'?>

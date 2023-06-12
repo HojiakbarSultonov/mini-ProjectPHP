@@ -4,7 +4,14 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+
   }
+.carouselImg{
+  background-image: url(https://pro-dachnikov.com/uploads/posts/2021-10/1633802856_122-p-foto-mashin-krutikh-s-krasivim-vidom-foto-128.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {

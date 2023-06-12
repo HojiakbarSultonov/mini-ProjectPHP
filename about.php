@@ -1,7 +1,7 @@
 <?php
 $title = "Biz haqimizda";
 require './includes/header.php'
-?>;
+?>
 <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
@@ -35,4 +35,4 @@ require './includes/header.php'
         </div>
     </div>
 </div>
-<?php require './includes/footer.php'?>;
+<?php require './includes/footer.php'?>

@@ -1,7 +1,7 @@
 <?php
 $title = "Narxlar";
 require './includes/header.php'
-?>;
+?>
 
 <div class="container py-7">
     <h1 class="text-center">Narxlar</h1>
@@ -118,4 +118,4 @@ require './includes/header.php'
 
 
 
-<?php require './includes/footer.php'?>;
+<?php require './includes/footer.php'?>
