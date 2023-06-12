@@ -1,6 +1,7 @@
-<?php require './includes/header.php'?>;
-
-
+<?php
+$title = "Bosh sahifa";
+require './includes/header.php'
+?>;
   <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
