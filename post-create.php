@@ -2,7 +2,25 @@
 $title = "Post yaratish";
 require './includes/header.php';
 
-if($_SERVER['REQUEST_METHOD']==='POST')
+require 'database.php';
+
+
+if($_SERVER['REQUEST_METHOD']==='POST') {
+    $title = $_POST['title'];
+    $body = $_POST['body'];
+
+
+
+    $statement = $pdo->prepare("INSERT INTO posts (title, body) VALUES (:title, :body )");
+    $statement->execute([
+        "title"=>$title,
+        "body"=>$body
+    ]);
+
+    header('Location: blog.php');
+
+    $_SESSION['created__Post'] = 'Post yaratildi';
+}
 
 ?>
 

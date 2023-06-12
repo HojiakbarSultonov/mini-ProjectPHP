@@ -1,6 +1,8 @@
 <?php
 $title = "Blog";
-require './includes/header.php'?>
+require './includes/header.php';
+
+?>
 
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
@@ -17,6 +19,13 @@ require './includes/header.php'?>
 
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
+           <?php
+           if(isset($_SESSION['created__Post'])):?>
+            <div class="alert alert-success" role="alert">
+               <?= $_SESSION['created__Post']?>
+               <?php unset($_SESSION['created__Post'])?>
+            </div>
+            <?php endif;?>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
