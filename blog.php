@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']==="POST" && isset($_POST['DELETE'])){
     $statement = $pdo->prepare('DELETE FROM posts WHERE id = ?');
     $statement->execute([$post_id]);
 
-    $_SESSION['Post ochirildi'] = 'Deleted Post';
+    $_SESSION['success'] = 'Deleted Post';
     header("Location: blog.php");
     exit;
 }
@@ -38,18 +38,18 @@ if($_SERVER['REQUEST_METHOD']==="POST" && isset($_POST['DELETE'])){
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
            <?php
-           if(isset($_SESSION['created__Post'])):?>
+           if(isset($_SESSION['success'])):?>
             <div class="alert alert-success" role="alert">
-               <?= $_SESSION['created__Post']?>
-               <?php unset($_SESSION['created__Post'])?>
+               <?= $_SESSION['success']?>
+               <?php unset($_SESSION['success'])?>
             </div>
             <?php endif;?>
 
             <?php
-            if(isset($_SESSION['Post ochirildi'])):?>
+            if(isset($_SESSION['success'])):?>
                 <div class="alert alert-danger" role="alert">
-                    <?= $_SESSION['Post ochirildi']?>
-                    <?php unset($_SESSION['Post ochirildi'])?>
+                    <?= $_SESSION['success']?>
+                    <?php unset($_SESSION['success'])?>
                 </div>
             <?php endif;?>
 
@@ -66,7 +66,7 @@ if($_SERVER['REQUEST_METHOD']==="POST" && isset($_POST['DELETE'])){
                             <p class="card-text"><?=$post['body']?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <a href="post-edit.php?id=<?= $post['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
                                     <form method="POST" onSubmit="return confirm('Rostdan ham o\'chirmoqchimisiz?')">
                                         <input type="hidden" name="post_id" value="<?=$post['id'] ?>">
                                         <input type="hidden" name="DELETE">
